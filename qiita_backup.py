@@ -55,11 +55,8 @@ def save_item(item):
     body = item["body"]
 
     # 画像URL抽出
-    pattern = r'!
-
-\[(.*?)\]
-
-\((https://qiita-user-contents\.imgix\.net/.*?)\)'
+    pattern = r'!\[(.*?)\]\((https://qiita-user-contents\.imgix\.net/.*?)\)'
+    
     matches = re.findall(pattern, body)
 
     if matches:
