@@ -1,0 +1,15 @@
+title: "Qiita Mirror"
+description: "Automatic backup of Qiita articles"
+theme: minima
+
+collections:
+  articles:
+    output: true
+    permalink: /articles/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "articles"
+    values:
+      layout: "post"
