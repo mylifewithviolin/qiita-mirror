@@ -10,8 +10,12 @@ on:
 jobs:
   backup:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
 
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -30,8 +34,11 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add -A
-          git diff --quiet && git diff --staged --quiet || git commit -m "Auto backup Qiita articles"
+          git add -A public/
+          if ! git diff --cached --quiet; then
+            git commit -m "Auto backup Qiita articles"
+            git push
+          fi
 
       - uses: actions/upload-pages-artifact@v4
         with:
