@@ -35,7 +35,7 @@ jobs:
 
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: .
+          path: ./public
 
   deploy:
     needs: backup
