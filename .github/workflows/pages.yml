@@ -18,11 +18,11 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install backup-qiita
-        run: pip install backup-qiita
+      - name: Install dependencies
+        run: pip install requests
 
-      - name: Backup Qiita articles
-        run: backup-qiita backup --output ./_articles
+      - name: Run Qiita backup script
+        run: python qiita_backup.py
         env:
           QIITA_TOKEN: ${{ secrets.QIITA_TOKEN }}
 
