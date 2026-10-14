@@ -49,7 +49,7 @@ def save_item(item):
     title = sanitize(item["title"])
     item_id = item["id"]
 
-    dir_name = f"{item_id}_{title}"
+    dir_name = os.path.join("public", f"{item_id}_{title}")
     os.makedirs(dir_name, exist_ok=True)
 
     body = item["body"]
