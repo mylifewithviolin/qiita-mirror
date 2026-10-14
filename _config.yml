@@ -1,6 +1,7 @@
 title: "Qiita Mirror"
 description: "Automatic backup of Qiita articles"
 theme: minima
+markdown: kramdown
 source: public
 
 collections:
