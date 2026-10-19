@@ -18,6 +18,7 @@ GitHub Copilot SDKを使ってリモートのAIエージェントと連携した
 GitHub CopilotのチャットゾーンはVSCodeの場合は右側で縦に見ている感じなので、あおい AI コードエディタもそういう感じにしています。
 
 ## AI仕様駆動開発の実際
+VsCode上でのGitHub CopilotのPro+版との対話となります。
 ### プロンプト１
 >現在の右側テキスト編集エリアの右側にGitHubCopilotとの対話に
 必要な要素を実装したいと思います。
