@@ -894,4 +894,4 @@ Lv1.3への更新で最小MVPのAI仕様駆動開発の完了条件の検証時�
 
 [^1]: あおい言語ファミリー（あおい・いずみ・なごみ・あいな）の対象仕様の本文・図は[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)、指定自作例示コードは[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)。転載・改変等は各ライセンスに従い、第三者素材・既存コードは各条件に従います。
  独立実装は商用・非商用、公開・非公開を問わず自由で、実装のライセンスも自由。仕様のライセンスは実装・利用者プログラムへ自動適用されません。名称・ロゴ・公式認定・特許・第三者の権利は別扱いとなります。仕様・例示は各ライセンスに従い無保証です。
- 付記：対象「日本語プログラミング言語 あおい（Aoi）2026 Lv1.3」｜権利者・表示名 mylifewithviolin｜原文 [URL](https://qiita.com/mylifewithviolin/items/7547eae0a9c0acf334f3)　｜CC0対象「言語仕様」内の全自作あおいソースコード例｜除外 なし
+ 付記：対象「日本語プログラミング言語 あおい（Aoi）2026 Lv1.4 ドラフト v3」｜権利者・表示名 mylifewithviolin｜原文 [URL](https://qiita.com/mylifewithviolin/items/390006a14125bd53f46a)　｜CC0対象「言語仕様」内の全自作あおいソースコード例｜除外 なし

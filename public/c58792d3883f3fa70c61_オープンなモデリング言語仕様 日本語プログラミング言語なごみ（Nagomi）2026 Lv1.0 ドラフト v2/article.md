@@ -490,5 +490,5 @@ CLIの正式な大文字小文字、結合形・分離形の両方を受理す�
 
 [^1]: あおい言語ファミリー（あおい・いずみ・なごみ・あいな）の対象仕様の本文・図は[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)、指定自作例示コードは[CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)。転載・改変等は各ライセンスに従い、第三者素材・既存コードは各条件に従います。
  独立実装は商用・非商用、公開・非公開を問わず自由で、実装のライセンスも自由。仕様のライセンスは実装・利用者プログラムへ自動適用されません。名称・ロゴ・公式認定・特許・第三者の権利は別扱いとなります。仕様・例示は各ライセンスに従い無保証です。
- 付記：対象「日本語プログラミング言語 いずみ（Izumi）2026 Lv1.0」｜権利者・表示名 mylifewithviolin｜原文 [URL](https://qiita.com/mylifewithviolin/items/872f9b17cd3a830f9f8d)　｜CC0対象「言語仕様」内の全自作いずみソースコード例｜除外 なし
+ 付記：対象「日本語プログラミング言語 なごみ（Nagomi）2026 Lv1.0 ドラフト v2」｜権利者・表示名 mylifewithviolin｜原文 [URL](https://qiita.com/mylifewithviolin/items/c58792d3883f3fa70c61)　｜CC0対象「言語仕様」内の全自作いずみソースコード例｜除外 なし
 
