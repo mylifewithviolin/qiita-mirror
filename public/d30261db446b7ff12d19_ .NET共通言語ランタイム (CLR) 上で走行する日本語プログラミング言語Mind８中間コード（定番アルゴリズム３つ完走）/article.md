@@ -2,6 +2,9 @@
 C#でMind単語が書けるようになるといろいろラクかなという願望があります。
 Mindのランタイム中間コードは非常に実装言語（や走行環境）と疎のつくりになっているので原理的には実現可能と考えていましたが、実装がたいへんでとん挫しておりました（ちょうど２年前）。最近AIエージェントの力を借りて対応語数を増やしています。
 
+# 日本語プログラミングMind（マインド）とは
+プログラミング言語Mind（マインド）は自然な日本語で記述できるスタック指向の軽量中間コードコンパイラ言語です[^1]。単語間の分かち書きが必須であくまで形式言語ですが、逆ポーランド記法[^2]で分かち書きされた日本語単語の語順が自然と日本語の語順となる「自然さ」で書くことができます。実装言語はCまたはTcl/Tk、Mind自身。
+
 # お題のC#ソースコードのクラス構成
 お手数ですが[こちらの記事](https://qiita.com/mylifewithviolin/items/70c386cb0aee7b3c016c)をご参照ください。
 
@@ -323,6 +326,8 @@ dotnet .\bin\Debug\net8.0\mind8dispatch.dll .\tests\fixtures\insertsort.mco
 ```
 の実行ステップ数93に対して今回は178でした。
 
+<details><summary>こちらの出力は少し長いので100ステップまでは閉じておきます。</summary>
+
 ```powershell
 PS C:\developments\vscode\mind8dispatch> dotnet .\bin\Debug\net8.0\mind8dispatch.dll .\tests\fixtures\variables.mco 
    1 8019  32793    114   1024        0        0   1024        0        0
@@ -425,6 +430,10 @@ PS C:\developments\vscode\mind8dispatch> dotnet .\bin\Debug\net8.0\mind8dispatch
   98 0020     32    174   1024        0        0   1021    12092    12184
   99 802C  32812  12094   1024        0        0   1022    12184      114
  100 0020     32    182   1024        0        0   1021    12094    12184
+```
+</details>
+ 
+ ```
  101 004D     77  12096   1024        0        0   1022    12184      114
  102 00EC    236  12102   1022        0        1   1022    12184      114
  103 0012     18  12106   1024        0        0   1022    12184      114
@@ -522,6 +531,8 @@ PS C:\developments\vscode\mind8dispatch> dotnet .\bin\Debug\net8.0\mind8dispatch
 PS C:\developments\vscode\mind8dispatch> 
 ```
 **バブルソートサンプル**
+<details><summary>こちらの出力は少し長いので閉じておきます。</summary>
+
 ```powershell
 PS C:\developments\vscode\mind8dispatch> dotnet .\bin\Debug\net8.0\mind8dispatch.dll .\tests\fixtures\bubblesort.mco  
 整列前　
@@ -775,6 +786,9 @@ PS C:\developments\vscode\mind8dispatch> dotnet .\bin\Debug\net8.0\mind8dispatch
 ボール数　 5　 6　 7　 8　 9　10　11　12　13　14　15　16　17　18　19　
 PS C:\developments\vscode\mind8dispatch> 
 ```
+
+</details>
+
 **挿入ソートサンプル**
 ```powershell
 PS C:\developments\vscode\mind8dispatch> dotnet .\bin\Debug\net8.0\mind8dispatch.dll .\tests\fixtures\insertsort.mco
@@ -847,10 +861,12 @@ PS C:\developments\vscode\mind8dispatch>
 
 # 使用AI
 ## GitHub Copilot
-GitHub CopilotのPro+版。あおい実装[^1]と検証の主担当。スーパバイザとしてMicrosoft Copilotを使いGitHub CopilotのCodeAgent推論量を最小化するプロンプトをCopilotで生成しGitHub CopilotのCodeAgentで実行という工法？を採用していました。ただし、Pro+版移行でこの点はあまり気にしなくなっています。
+GitHub CopilotのPro+版。あおい実装[^3]と検証の主担当。スーパバイザとしてMicrosoft Copilotを使いGitHub CopilotのCodeAgent推論量を最小化するプロンプトをCopilotで生成しGitHub CopilotのCodeAgentで実行という工法？を採用していました。ただし、Pro+版移行でこの点はあまり気にしなくなっています。
 
 # おわりに
 以上です。いかがでしたでしょうか？consoleレベルで中間コード総数は740強ありまして、この記事の時点で実装されているのが190くらいでした。まだまだ序の口ですが、この実装の完了をまたずに互換コンパイラの様子も次回記事にてご紹介いたします。
 
+[^1]: Mind7と9のWindowsGUIはTcl/Tkインタプリタで駆動されます。
+[^2]: 演算子を被演算子の中間に記述する中置記法 1 + 2、前に記述する前置記法（ポーランド記法）+ 1 2、後に記述する後置記法（逆ポーランド記法）1 2 +がある。日本語は「１と ２を 足す」と通常表現されますので、これは後置記法となります。
 
-[^1]: AIとつくる日本語プログラミング言語あおい（Aoi） - Qiita
+[^3]: AIとつくる日本語プログラミング言語あおい（Aoi） - Qiita
